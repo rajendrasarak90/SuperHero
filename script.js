@@ -30,7 +30,7 @@ function displayCharList(chars){
         let redirectLink = document.createElement('a');
         let charListItem = document.createElement('div');
         redirectLink.innerHTML = "Link";
-        redirectLink.href = "./details/charDetails.html?character=" + chars[idx].id;
+        redirectLink.href = "details/charDetails.html?character=" + chars[idx].id;
 
         charListItem.dataset.id = chars[idx].id;
         charListItem.className='search-list-item';
@@ -39,7 +39,7 @@ function displayCharList(chars){
             <img src="${chars[idx].thumbnail.path + "." + chars[idx].thumbnail.extension}">
         </div>
         <div class="search-item-info"> 
-            <a href = ${ "./details/charDetails.html?character=" + chars[idx].id }> <h3>${chars[idx].name}</h3> </a>
+            <a href = ${ "details/charDetails.html?character=" + chars[idx].id }> <h3>${chars[idx].name}</h3> </a>
             <button onclick="addtoFavs()"> Like </button>
         </div>`;
         searchList.append(charListItem);
